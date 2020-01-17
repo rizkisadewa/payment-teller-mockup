@@ -41,12 +41,6 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 
 <br />
 
-### 🌟 Pro Version
-
-If you're looking for something more, check out [Shards Dashboard Pro React](https://designrevision.com/downloads/shards-dashboard-pro-react/) which features many more custom templates and components. Use the `GITHUB15` coupon code for a **15% discount off the current price**.
-
-<br />
-
 ### Built using
 
 - [Shards React](https://github.com/designrevision/shards-react)
@@ -57,7 +51,3 @@ If you're looking for something more, check out [Shards Dashboard Pro React](htt
 - [Quill](https://quilljs.com/)
 
 <br />
-
-### Changelog
-
-Please check out the [CHANGELOG](CHANGELOG.md).
