@@ -3,27 +3,27 @@ export default function() {
     {
       title: "Blog Dashboard",
       to: "/blog-overview",
-      htmlBefore: '<i class="material-icons">edit</i>',
+      htmlBefore: '<i class="material-icons">dashboard</i>',
       htmlAfter: ""
     },
     {
-      title: "Blog Posts",
-      htmlBefore: '<i class="material-icons">vertical_split</i>',
+      title: "Payment Umroh",
+      htmlBefore: '<i class="material-icons">money</i>',
       to: "/blog-posts",
     },
     {
-      title: "Add New Post",
+      title: "Payment Haji",
       htmlBefore: '<i class="material-icons">note_add</i>',
       to: "/add-new-post",
     },
     {
-      title: "Forms & Components",
-      htmlBefore: '<i class="material-icons">view_module</i>',
+      title: "Pajak",
+      htmlBefore: '<i class="material-icons">notes</i>',
       to: "/components-overview",
     },
     {
-      title: "Tables",
-      htmlBefore: '<i class="material-icons">table_chart</i>',
+      title: "Payment UIN",
+      htmlBefore: '<i class="material-icons">school</i>',
       to: "/tables",
     },
     {

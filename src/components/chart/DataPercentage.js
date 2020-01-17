@@ -12,7 +12,7 @@ import {
 
 import Chart from "../../utils/chart";
 
-class UsersByDevice extends React.Component {
+class DataPercentage extends React.Component {
   constructor(props) {
     super(props);
 
@@ -86,7 +86,7 @@ class UsersByDevice extends React.Component {
   }
 }
 
-UsersByDevice.propTypes = {
+DataPercentage.propTypes = {
   /**
    * The component's title.
    */
@@ -105,22 +105,23 @@ UsersByDevice.propTypes = {
   chartData: PropTypes.object
 };
 
-UsersByDevice.defaultProps = {
-  title: "Users by device",
+DataPercentage.defaultProps = {
+  title: "Data Percentage",
   chartData: {
     datasets: [
       {
         hoverBorderColor: "#ffffff",
-        data: [68.3, 24.2, 7.5],
+        data: [38.3, 24.2, 7.5, 20],
         backgroundColor: [
-          "rgba(0,123,255,0.9)",
-          "rgba(0,123,255,0.5)",
-          "rgba(0,123,255,0.3)"
+          "rgba(0,123,255,1)",
+          "rgba(255,65,105,1)",
+          "rgba(98, 151, 73, 1)",
+          "rgba(158, 255, 255, 1)"
         ]
       }
     ],
-    labels: ["Desktop", "Tablet", "Mobile"]
+    labels: ["Umroh", "Haji", "Pajak", "UIN"]
   }
 };
 
-export default UsersByDevice;
+export default DataPercentage;

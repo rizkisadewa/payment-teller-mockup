@@ -5,7 +5,7 @@ import { Row, Col, Card, CardHeader, CardBody, Button } from "shards-react";
 import RangeDatePicker from "../common/RangeDatePicker";
 import Chart from "../../utils/chart";
 
-class UsersOverview extends React.Component {
+class DataOverview extends React.Component {
   constructor(props) {
     super(props);
 
@@ -68,21 +68,21 @@ class UsersOverview extends React.Component {
       ...this.props.chartOptions
     };
 
-    const BlogUsersOverview = new Chart(this.canvasRef.current, {
+    const BlogDataOverview = new Chart(this.canvasRef.current, {
       type: "LineWithLine",
       data: this.props.chartData,
       options: chartOptions
     });
 
     // They can still be triggered on hover.
-    const buoMeta = BlogUsersOverview.getDatasetMeta(0);
+    const buoMeta = BlogDataOverview.getDatasetMeta(0);
     buoMeta.data[0]._model.radius = 0;
     buoMeta.data[
       this.props.chartData.datasets[0].data.length - 1
     ]._model.radius = 0;
 
     // Render the chart.
-    BlogUsersOverview.render();
+    BlogDataOverview.render();
   }
 
   render() {
@@ -117,7 +117,7 @@ class UsersOverview extends React.Component {
   }
 }
 
-UsersOverview.propTypes = {
+DataOverview.propTypes = {
   /**
    * The component's title.
    */
@@ -132,13 +132,13 @@ UsersOverview.propTypes = {
   chartOptions: PropTypes.object
 };
 
-UsersOverview.defaultProps = {
-  title: "Users Overview",
+DataOverview.defaultProps = {
+  title: "Data Payment - Januari 2020",
   chartData: {
     labels: Array.from(new Array(30), (_, i) => (i === 0 ? 1 : i)),
     datasets: [
       {
-        label: "Current Month",
+        label: "Umroh",
         fill: "start",
         data: [
           500,
@@ -181,7 +181,7 @@ UsersOverview.defaultProps = {
         pointHoverRadius: 3
       },
       {
-        label: "Past Month",
+        label: "Haji",
         fill: "start",
         data: [
           380,
@@ -219,7 +219,92 @@ UsersOverview.defaultProps = {
         borderColor: "rgba(255,65,105,1)",
         pointBackgroundColor: "#ffffff",
         pointHoverBackgroundColor: "rgba(255,65,105,1)",
-        borderDash: [3, 3],
+        borderWidth: 1,
+        pointRadius: 0,
+        pointHoverRadius: 2,
+        pointBorderColor: "rgba(255,65,105,1)"
+      },
+      {
+        label: "Pajak",
+        fill: "start",
+        data: [
+          280,
+          330,
+          220,
+          330,
+          510,
+          840,
+          572,
+          119,
+          491,
+          629,
+          800,
+          903,
+          101,
+          280,
+          191,
+          520,
+          600,
+          200,
+          730,
+          302,
+          220,
+          680,
+          189,
+          310,
+          500,
+          630,
+          730,
+          820,
+          980,
+          200
+        ],
+        backgroundColor: "rgba(98, 151, 73, 0.5)",
+        borderColor: "#003d00",
+        pointBackgroundColor: "#ffffff",
+        borderWidth: 1,
+        pointRadius: 0,
+        pointHoverRadius: 2,
+        pointBorderColor: "rgba(255,65,105,1)"
+      },
+      {
+        label: "UIN",
+        fill: "start",
+        data: [
+          580,
+          630,
+          420,
+          630,
+          810,
+          940,
+          372,
+          219,
+          391,
+          929,
+          200,
+          303,
+          101,
+          280,
+          391,
+          620,
+          800,
+          300,
+          730,
+          902,
+          520,
+          980,
+          289,
+          710,
+          1900,
+          1630,
+          1730,
+          1820,
+          1980,
+          1200
+        ],
+        backgroundColor: "rgba(158, 255, 255, 0.5)",
+        borderColor: "#14cba8",
+        pointBackgroundColor: "#ffffff",
         borderWidth: 1,
         pointRadius: 0,
         pointHoverRadius: 2,
@@ -229,4 +314,4 @@ UsersOverview.defaultProps = {
   }
 };
 
-export default UsersOverview;
+export default DataOverview;
